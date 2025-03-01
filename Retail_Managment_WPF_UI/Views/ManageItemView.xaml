@@ -1,14 +1,16 @@
-﻿<Window x:Class="Retail_Managment_WPF_UI.Views.AdminDashbordView"
+﻿<Window x:Class="Retail_Managment_WPF_UI.Views.ManageItemView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Retail_Managment_WPF_UI.Views"
         mc:Ignorable="d"
-        Title="Admin Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen"
+        Title="ManageItemView" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
         Background="Transparent" 
         WindowStyle="None" 
         AllowsTransparency="True">
+
     <Window.Resources>
         <!-- Sidebar Button Style -->
         <Style x:Key="SidebarButton" TargetType="Button">
@@ -76,47 +78,91 @@
         <!-- Top Bar (Spans Full Width) -->
         <DockPanel Background="#5A189A" Grid.Row="0">
             <!-- Window Title -->
-            <TextBlock Text="Admin Dashboard" Foreground="White" FontSize="18"
-                       VerticalAlignment="Center" Margin="20,0,0,0"/>
+            <TextBlock Text="Manage Item Dashboard" Foreground="White" FontSize="18"
+           VerticalAlignment="Center" Margin="20,0,0,0"/>
 
             <!-- Window Control Buttons -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="─" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="18"
-                        Click="Minimize_Click" Style="{StaticResource TitleBarButton}"/>
+            Background="Transparent" FontSize="18"
+            Click="Minimize_Click" Style="{StaticResource TitleBarButton}"/>
 
                 <Button Name="MaximizeButton" Content="□" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="14"
-                        Click="Maximize_Click" Style="{StaticResource TitleBarButton}"/>
+            Background="Transparent" FontSize="14"
+            Click="Maximize_Click" Style="{StaticResource TitleBarButton}"/>
 
                 <Button Content="✖" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="16"
-                        Click="Close_Click" Style="{StaticResource TitleBarButton}"/>
+            Background="Transparent" FontSize="16"
+            Click="Close_Click" Style="{StaticResource TitleBarButton}"/>
             </StackPanel>
         </DockPanel>
 
         <!-- Sidebar & Main Content Grid -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="500"/>
                 <!-- Sidebar -->
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition/>
                 <!-- Main Content -->
             </Grid.ColumnDefinitions>
 
-            <!-- Sidebar (Navigation) -->
-            <StackPanel Background="#3A0CA3" Width="220" Height="Auto" Grid.Column="0">
-                <TextBlock Text="Admin Panel" Foreground="White" FontSize="22" FontWeight="Bold"
-                           HorizontalAlignment="Center" Margin="0,30,0,30"/>
 
-                <Button Content="Dashboard" Style="{StaticResource SidebarButton}" Click="Dashboard_Click"/>
-                <Button Content="Users" Style="{StaticResource SidebarButton}" Click="Users_Click"/>
-                <Button Content="Items" Style="{StaticResource SidebarButton}" Click="Items_Click"/>
-                <Button Content="Logout" Style="{StaticResource SidebarButton}" Click="Logout_Click"/>
-            </StackPanel>
+
+
 
             <!-- Main Content Area -->
             <Frame Name="MainFrame" Grid.Column="1"/>
+            <Border Background="White" CornerRadius="15" 
+            Padding="20" Opacity="0.95" Margin="0,10,0,21" HorizontalAlignment="Center" Width="356">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock Text="Item Details" FontSize="24" FontWeight="Bold" 
+                    Foreground="#333" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+
+                    <TextBlock Foreground="Gray" Margin="5,0" Text="1"/>
+                    <TextBox x:Name="txtUsername" Height="35" FontSize="14"
+                    BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                    Background="#F2F2F2" />
+
+                    <TextBlock Text="2" Foreground="Gray" Margin="10,10,5,0" IsEnabled="False"/>
+                    <PasswordBox x:Name="txtFirstName" Height="35" FontSize="14"
+                    BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                    Background="#F2F2F2" />
+
+                    <TextBlock Text="3" Foreground="Gray" Margin="10,10,5,0" IsEnabled="False"/>
+                    <PasswordBox x:Name="txtLastName" Height="35" FontSize="14"
+                    BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                    Background="#F2F2F2" />
+
+                    <TextBlock Text="4" Foreground="Gray" Margin="10,10,5,0" IsEnabled="False"/>
+                    <PasswordBox x:Name="txtRole" Height="35" FontSize="14"
+                   BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                   Background="#F2F2F2" />
+
+                    <TextBlock Text="5" Foreground="Gray" Margin="10,10,5,0" IsEnabled="False"/>
+                    <PasswordBox x:Name="txtPhoneNumber" Height="35" FontSize="14"
+                    BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                    Background="#F2F2F2" />
+
+                    <TextBlock Text="6" Foreground="Gray" Margin="10,10,5,0" IsEnabled="False"/>
+                    <PasswordBox x:Name="txtEmail" Height="35" FontSize="14"
+                    BorderBrush="#6A11CB" BorderThickness="1" Padding="5"
+                    Background="#F2F2F2" />
+
+
+
+                    <Button Content="SAVE" Width="100" Height="40" FontSize="16"
+                    Background="#6A11CB" Foreground="White" FontWeight="Bold"
+                    HorizontalAlignment="Center" Margin="20,20,20,0" 
+                    />
+
+
+                </StackPanel>
+            </Border>
         </Grid>
     </Grid>
+
 </Window>

@@ -36,6 +36,13 @@ namespace Retail_Managment_WPF_UI.Views
                 this.Close();
                 
             }
+            else if(username == "user" && password == "1234") 
+            {
+                MessageBox.Show("Login Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                UserDashbordView userDashView = new UserDashbordView();
+                userDashView.Show();
+                this.Close();
+            }
             else
             {
                 MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);

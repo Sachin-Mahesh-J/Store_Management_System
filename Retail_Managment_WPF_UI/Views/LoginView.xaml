@@ -81,9 +81,8 @@
             </Border>
 
             <!-- Login Card on the Left -->
-            <Border Height="374" Background="White" CornerRadius="15" 
-                    Padding="20" Opacity="0.95" Grid.Column="0" Margin="40,0,410,0"
-                    VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <Border Background="White" CornerRadius="15" 
+                    Padding="20" Opacity="0.95" Grid.Column="1" Margin="55,23,35,23">
                 <Border.Effect>
                     <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5"/>
                 </Border.Effect>

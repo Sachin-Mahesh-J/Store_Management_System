@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +15,11 @@ using System.Windows.Shapes;
 namespace Retail_Managment_WPF_UI.Views
 {
     /// <summary>
-    /// Interaction logic for AdminDashbordView.xaml
+    /// Interaction logic for UserDashbordView.xaml
     /// </summary>
-    public partial class AdminDashbordView : Window
+    public partial class UserDashbordView : Window
     {
-        public AdminDashbordView()
+        public UserDashbordView()
         {
             InitializeComponent();
         }
@@ -33,17 +32,11 @@ namespace Retail_Managment_WPF_UI.Views
         private void Users_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Users Clicked", "Users", MessageBoxButton.OK, MessageBoxImage.Information);
-            ManageUserView manageUserView = new ManageUserView();
-            manageUserView.Show();
-            this.Close();    
         }
 
-        private void Items_Click(object sender, RoutedEventArgs e)
+        private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Items Clicked", "Items", MessageBoxButton.OK, MessageBoxImage.Information);
-            ManageItemView manageItemView = new ManageItemView();
-            manageItemView.Show();
-            this.Close();
+            MessageBox.Show("Settings Clicked", "Settings", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -52,7 +45,7 @@ namespace Retail_Managment_WPF_UI.Views
             LoginView loginView = new LoginView();
             loginView.Show();
             this.Close();
-            
+
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {

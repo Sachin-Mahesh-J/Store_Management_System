@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,44 +15,15 @@ using System.Windows.Shapes;
 namespace Retail_Managment_WPF_UI.Views
 {
     /// <summary>
-    /// Interaction logic for AdminDashbordView.xaml
+    /// Interaction logic for ManageItemView.xaml
     /// </summary>
-    public partial class AdminDashbordView : Window
+    public partial class ManageItemView : Window
     {
-        public AdminDashbordView()
+        public ManageItemView()
         {
             InitializeComponent();
         }
 
-        private void Dashboard_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Dashboard Clicked", "Dashboard", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        private void Users_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Users Clicked", "Users", MessageBoxButton.OK, MessageBoxImage.Information);
-            ManageUserView manageUserView = new ManageUserView();
-            manageUserView.Show();
-            this.Close();    
-        }
-
-        private void Items_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Items Clicked", "Items", MessageBoxButton.OK, MessageBoxImage.Information);
-            ManageItemView manageItemView = new ManageItemView();
-            manageItemView.Show();
-            this.Close();
-        }
-
-        private void Logout_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Logging Out...", "Logout", MessageBoxButton.OK, MessageBoxImage.Information);
-            LoginView loginView = new LoginView();
-            loginView.Show();
-            this.Close();
-            
-        }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close(); // Close the window
