@@ -12,7 +12,6 @@
         AllowsTransparency="True">
 
     <Window.Resources>
-        <!-- Sidebar Button Style -->
         <Style x:Key="SidebarButton" TargetType="Button">
             <Setter Property="Height" Value="50"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -30,30 +29,14 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Background">
-                <Setter.Value>
-                    <SolidColorBrush Color="Transparent"/>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#6A11CB"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
 
-        <!-- Title Bar Buttons Style -->
         <Style x:Key="TitleBarButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#8229CC"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
     </Window.Resources>
 
@@ -72,7 +55,6 @@
             <RowDefinition Height="50"/>
             <!-- Top Bar -->
             <RowDefinition Height="*"/>
-            <!-- Sidebar & Main Content -->
         </Grid.RowDefinitions>
 
         <!-- Top Bar (Spans Full Width) -->
@@ -97,10 +79,6 @@
             </StackPanel>
         </DockPanel>
 
-        <!-- Sidebar & Main Content Grid -->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
                 <!-- Sidebar -->
                 <ColumnDefinition/>
                 <!-- Main Content -->

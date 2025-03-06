@@ -66,7 +66,6 @@ namespace Retail_Managment_WPF_UI.Views
             {
                 this.DragMove();
             }
-        }
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;

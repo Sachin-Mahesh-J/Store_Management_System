@@ -30,24 +30,16 @@ namespace Retail_Managment_WPF_UI.Views
 
             if (username == "admin" && password == "1234") // Replace with DB authentication
             {
-                MessageBox.Show("Login Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 AdminDashbordView adminDashbordView = new AdminDashbordView();
                 adminDashbordView.Show();
-                this.Close();
                 
             }
             else if(username == "user" && password == "1234") 
             {
-                MessageBox.Show("Login Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 UserDashbordView userDashView = new UserDashbordView();
                 userDashView.Show();
                 this.Close();
             }
-            else
-            {
-                MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
             this.Close();
