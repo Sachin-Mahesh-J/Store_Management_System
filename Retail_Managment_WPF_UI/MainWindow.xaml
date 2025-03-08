@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:Retail_Managment_WPF_UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
+    <Grid>
+        
+    </Grid>
 </Window>
