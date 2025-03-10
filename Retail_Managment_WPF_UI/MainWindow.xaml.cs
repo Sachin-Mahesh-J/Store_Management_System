@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Retail_Managment_WPF_UI.Views;
 
 namespace Retail_Managment_WPF_UI
 {
@@ -23,6 +24,13 @@ namespace Retail_Managment_WPF_UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window loginview = new LoginView();
+            loginview.Show();
+            this.Close();
         }
     }
 }
