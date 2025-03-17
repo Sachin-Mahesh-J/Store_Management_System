@@ -34,7 +34,6 @@ namespace Retail_Managment_WPF_UI.Services
                 string query = "SELECT * FROM Users WHERE Username = @username AND PasswordHash = @password";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 return reader;
             }

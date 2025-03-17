@@ -57,8 +57,6 @@ namespace Retail_Managment_WPF_UI.Services
                 {
                     MessageBox.Show("Unknown role detected. Contact support.");
                 }
-                
-
             }
             else
             {
