@@ -131,6 +131,9 @@
     <Compile Include="Views\ManagerDashbordView.xaml.cs">
       <DependentUpon>ManagerDashbordView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Product_Manage.xaml.cs">
+      <DependentUpon>Product_Manage.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -164,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ManagerDashbordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Product_Manage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
