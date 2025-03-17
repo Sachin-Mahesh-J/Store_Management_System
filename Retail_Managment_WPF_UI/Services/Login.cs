@@ -21,11 +21,10 @@ namespace Retail_Managment_WPF_UI.Services
 
         public void LoginBackend(string username, string password, Window window)
         {
-
             MySqlConnection conn = DbConnect.GetConnection();
             MySqlDataReader reader = DbConnect.CheckCredentials(username, password, conn);
 
-            if (reader != null && reader.Read())
+            if (reader != null)
             {
                 currentuserid = Convert.ToInt32(reader["UserID"]);
                 currentusername = reader["Username"].ToString();
@@ -60,11 +59,17 @@ namespace Retail_Managment_WPF_UI.Services
             }
             else
             {
-                MessageBox.Show("Invalid Username or Password.");
+                MessageBox.Show("Invalid Username or Password. login");
             }
 
-            reader.Close();
-            conn.Close();
+            if (reader != null)
+            {
+                reader.Close();
+            }
+            if (conn != null)
+            {
+                conn.Close();
+            }
         }
 
 

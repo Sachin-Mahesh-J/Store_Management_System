@@ -43,5 +43,12 @@ namespace Retail_Managment_WPF_UI.Views
         {
             CommonButtons.dragmove(this, e);
         }
+
+        private void btnM_employee_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Admin_ManageEmployeesView();
+            window.Show();
+            this.Close();
+        }
     }
 }

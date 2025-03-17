@@ -24,6 +24,7 @@ namespace Retail_Managment_WPF_UI.Views
         {
             InitializeComponent();
         }
+
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             CommonButtons.minimizebutton(this);
@@ -42,6 +43,13 @@ namespace Retail_Managment_WPF_UI.Views
         private void topbar_darg(object sender, MouseButtonEventArgs e)
         {
             CommonButtons.dragmove(this, e);
+        }
+
+        private void btnM_employee_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Admin_ManageEmployeesView();
+            window.Show();
+            this.Close();
         }
     }
 }

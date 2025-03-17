@@ -5,63 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Retail_Managment_WPF_UI.Views"
         mc:Ignorable="d"
-        Title="Cashier Dashboard" Height="600" Width="1000"
+        Title="Cashier Dashboard" Height="900" Width="1600"
         WindowStartupLocation="CenterScreen"
         Background="Transparent" 
         WindowStyle="None" 
         AllowsTransparency="True">
-    <Window.Resources>
-        <!-- Sidebar Button Style -->
-        <Style x:Key="SidebarButton" TargetType="Button">
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" Padding="10">
-                            <ContentPresenter HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Background">
-                <Setter.Value>
-                    <SolidColorBrush Color="Transparent"/>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#6A11CB"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <!-- Title Bar Buttons Style -->
-        <Style x:Key="TitleBarButton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#8229CC"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
-
-
-
+    
     <Grid>
         <!-- Define Rows (Top Bar, Main Content) -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
             <!-- Top Bar -->
             <RowDefinition Height="*"/>
             <!-- Sidebar + Main Content -->
@@ -75,28 +28,28 @@
             <!-- Main Content -->
         </Grid.ColumnDefinitions>
 
-        <!-- Top Bar (Full Width) -->
-        <DockPanel Background="#5A189A" Grid.Row="0" Grid.ColumnSpan="2" LastChildFill="True" MouseDown="topbar_darg">
-            <!-- Window Title -->
-            <TextBlock Text="Cashier Dashboard" Foreground="White" FontSize="18"
-                       VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Border Background="#6A11CB" Height="30" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2">
+            <DockPanel Background="#5A189A" LastChildFill="True" MouseDown="topbar_darg">
+                <!-- Window Title -->
+                <TextBlock Text="Cashier Dashbord" Foreground="White" FontSize="18"
+       VerticalAlignment="Center" Margin="20,0,0,0"/>
 
-            <!-- Window Control Buttons -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="─" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="18"
-                        Click="Minimize_Click" Style="{StaticResource TitleBarButton}"/>
+                <!-- Window Control Buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="─" Width="40" Height="30" Foreground="White"
+        Background="Transparent" FontSize="18"
+        Click="Minimize_Click" Style="{StaticResource TitleBarButton}"/>
 
-                <Button Name="MaximizeButton" Content="□" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="14"
-                        Click="Maximize_Click" Style="{StaticResource TitleBarButton}"/>
+                    <Button Name="MaximizeButton" Content="□" Width="40" Height="30" Foreground="White"
+        Background="Transparent" FontSize="14"
+        Click="Maximize_Click" Style="{StaticResource TitleBarButton}"/>
 
-                <Button Content="✖" Width="40" Height="30" Foreground="White"
-                        Background="Transparent" FontSize="16"
-                        Click="Close_Click" Style="{StaticResource TitleBarButton}"/>
-            </StackPanel>
-        </DockPanel>
-
+                    <Button Content="✖" Width="40" Height="30" Foreground="White"
+        Background="Transparent" FontSize="16"
+        Click="Close_Click" Style="{StaticResource TitleBarButton}"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
         <!-- Sidebar (Navigation) -->
         <StackPanel Background="#3A0CA3" Width="220" Height="Auto" Grid.Row="1" Grid.Column="0">
 
