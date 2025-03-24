@@ -62,7 +62,7 @@
 
             <Button Content="Dashboard" Style="{StaticResource SidebarButton}"/>
             <Button x:Name="btnM_employee" Content="Manage Employees" Style="{StaticResource SidebarButton}" Click="btnM_employee_Click"/>
-            <Button Content="Manage Product" Style="{StaticResource SidebarButton}"/>
+            <Button Content="Manage Product" Style="{StaticResource SidebarButton}" Click="btnM_Porduct_Click"/>
             <Button Content="Logout" Style="{StaticResource SidebarButton}"/>
         </StackPanel>
 

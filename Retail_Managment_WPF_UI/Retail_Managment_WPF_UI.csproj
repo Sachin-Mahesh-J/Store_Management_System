@@ -128,6 +128,9 @@
     <Compile Include="Views\Admin_ManageEmployeesView.xaml.cs">
       <DependentUpon>Admin_ManageEmployeesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ManaageProductsView.xaml.cs">
+      <DependentUpon>ManaageProductsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ManagerDashbordView.xaml.cs">
       <DependentUpon>ManagerDashbordView.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Admin_ManageEmployeesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManaageProductsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

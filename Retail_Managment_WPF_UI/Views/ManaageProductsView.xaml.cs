@@ -16,14 +16,15 @@ using Retail_Managment_WPF_UI.Services;
 namespace Retail_Managment_WPF_UI.Views
 {
     /// <summary>
-    /// Interaction logic for AdminDashbordView.xaml
+    /// Interaction logic for ManaageProductsView.xaml
     /// </summary>
-    public partial class AdminDashbordView : Window
+    public partial class ManaageProductsView : Window
     {
-        public AdminDashbordView()
+        public ManaageProductsView()
         {
             InitializeComponent();
         }
+
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
             CommonButtons.minimizebutton(this);
@@ -49,6 +50,11 @@ namespace Retail_Managment_WPF_UI.Views
             Window window = new Admin_ManageEmployeesView();
             window.Show();
             this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e) 
+        {
+
         }
 
         private void btnM_Porduct_Click(object sender, RoutedEventArgs e)
